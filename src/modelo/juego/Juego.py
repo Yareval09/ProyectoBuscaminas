@@ -62,7 +62,7 @@ class Juego:
             self.notificar_observadores(EventoJuego.PARTIDA_INICIADA)
 
     # Descubrimiento de casillas
-    def descubrir_casilla(self, coordenada) -> None
+    def descubrir_casilla(self, coordenada) -> None:
         if not self._jugada_valida(coordenada):
                 return
 
@@ -100,7 +100,7 @@ class Juego:
             self.notificar_observadores(EventoJuego.BANDERA_MODIFICADA)
 
     # Fin de la partida
-    def _finalizar_partida(self, estado: EstadoJuego) -> None
+    def _finalizar_partida(self, estado: EstadoJuego) -> None:
         self.temporizador.detener()
         self.estado = estado
 
